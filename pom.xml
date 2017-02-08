@@ -33,7 +33,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
 		<!-- web start -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -166,6 +165,32 @@
 		</dependency>
 		<!-- spring end -->
 
+		<!-- thymeleaf start -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf</artifactId>
+			<version>${thymeleaf.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring4</artifactId>
+			<version>${thymeleaf.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
+			<version>${thymeleaf.version}</version>
+		</dependency>
+		<!-- thymeleaf end -->
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.7</version>
+		</dependency>
 
 		<!-- log start -->
 		<dependency>
