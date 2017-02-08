@@ -4,11 +4,13 @@
 
 ## Spring Security4 默认的的登录页面
 
-action: /login
-method: /POST
+form表单参数:
 
-name="username"
-name="password"
+	action: /login
+	method: /POST
+	
+	name="username"
+	name="password"
 
 **csrf**
 
