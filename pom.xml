@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.xlinyu</groupId>
-	<artifactId>spring-security</artifactId>
+	<artifactId>spring-security4.x</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>spring-security Maven Webapp</name>
+	<name>spring-security4.x Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -179,6 +179,8 @@
 			<version>${thymeleaf.version}</version>
 		</dependency>
 
+		<!-- 可以在thymeleaft中使用security的标签 -->
+		<!-- 基于xml的需要手动配置 -->
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
@@ -227,6 +229,20 @@
 		</dependency>
 
 		<!-- Apache commons end -->
+		
+		<!-- webjars -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
@@ -272,6 +288,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>spring-security</finalName>
+		<finalName>spring-security4.x</finalName>
 	</build>
 </project>

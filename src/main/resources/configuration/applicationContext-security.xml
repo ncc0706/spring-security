@@ -6,13 +6,29 @@
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
+	<!-- 登录页不需要权限 -->
+	<http pattern="/account/signin" security="none"></http>
+	
+	<!-- 静态资源不需要权限 -->
+	<http pattern="/webjars/**" security="none"></http>
+	<http pattern="/static/**" security="none"></http>
+
 	<http auto-config="true">
 		<intercept-url pattern="/**" access="authenticated"/>
+		
+		<!-- 自定义登录页面 -->
+		<form-login login-page="/account/signin" 
+			authentication-failure-url="/account/signin"
+			default-target-url="/"/>
+		
+		<!-- 默认是开启的 -->
+		<csrf disabled="true"/>
 	</http>
 
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>
+				<user name="bill" password="abc123" authorities="ROLE_USER"/>
 				<user name="admin" password="admin" authorities="ROLE_ADMIN"/>
 			</user-service>
 		</authentication-provider>
